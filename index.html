@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Agriculture | Digital Farming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <h2 class="logo">🌱 Smart<span>Agri</span></h2>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#crops">Crops</a></li>
+            <li><a href="#methods">Methods</a></li>
+            <li><a href="#irrigation">Irrigation</a></li>
+            <li><a href="#fertilizer">Fertilizers</a></li>
+            <li><a href="#tips">Farmer Tips</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HOME SECTION -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Smart Agriculture for a <span>Better Future</span></h1>
+
+        <p>
+            Discover modern farming techniques, crop information,
+            irrigation methods and smart solutions for sustainable agriculture.
+        </p>
+
+        <a href="#crops" class="btn">Explore Farming</a>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about">
+    <h2>Welcome to Digital Farming</h2>
+    <p>
+        Smart Agriculture uses modern technology and scientific
+        methods to improve crop production, save water and support farmers.
+        Our platform provides useful agricultural knowledge in one place.
+    </p>
+</section>
+
+<!-- CROP INFORMATION -->
+<section id="crops" class="section">
+    <h2>Crop Information</h2>
+    <p class="subtitle">Explore different crops and their growing requirements.</p>
+
+    <input type="text" id="cropSearch"
+    placeholder="Search crops (Rice, Wheat, Maize...)">
+
+    <div class="card-container" id="cropContainer">
+
+        <div class="card crop-card" data-name="rice">
+            <img src="https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=500" alt="Rice crop">
+            <h3>Rice</h3>
+            <p>Requires warm climate, fertile soil and sufficient water.</p>
+            <button onclick="showCrop('rice')">View Details</button>
+        </div>
+
+        <div class="card crop-card" data-name="wheat">
+            <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=500" alt="Wheat crop">
+            <h3>Wheat</h3>
+            <p>Grows well in cool weather with moderate irrigation.</p>
+            <button onclick="showCrop('wheat')">View Details</button>
+        </div>
+
+        <div class="card crop-card" data-name="maize">
+            <img src="https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=500" alt="Maize crop">
+            <h3>Maize</h3>
+            <p>Needs sunlight, fertile soil and proper drainage.</p>
+            <button onclick="showCrop('maize')">View Details</button>
+        </div>
+
+        <div class="card crop-card" data-name="cotton">
+            <img src="https://images.unsplash.com/photo-1594950609278-1d4b5c6c5b9e?w=500" alt="Cotton crop">
+            <h3>Cotton</h3>
+            <p>Requires warm temperatures and well-drained soil.</p>
+            <button onclick="showCrop('cotton')">View Details</button>
+        </div>
+
+    </div>
+
+    <div id="cropResult" class="result"></div>
+</section>
+
+<!-- MODERN FARMING -->
+<section id="methods" class="section light">
+    <h2>Modern Farming Methods</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>🚜 Precision Farming</h3>
+            <p>Uses GPS, sensors and data to improve farming efficiency.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌿 Organic Farming</h3>
+            <p>Uses natural fertilizers and eco-friendly farming practices.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏡 Greenhouse Farming</h3>
+            <p>Controls temperature and humidity for better crop growth.</p>
+        </div>
+
+        <div class="card">
+            <h3>💧 Hydroponics</h3>
+            <p>Grows plants using nutrient-rich water without soil.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- IRRIGATION -->
+<section id="irrigation" class="section">
+    <h2>Modern Irrigation Techniques</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>💧 Drip Irrigation</h3>
+            <p>Delivers water directly to plant roots and reduces wastage.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌧 Sprinkler Irrigation</h3>
+            <p>Distributes water over crops like natural rainfall.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌱 Surface Irrigation</h3>
+            <p>Water flows over the soil surface to reach crops.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FERTILIZER CALCULATOR -->
+<section id="fertilizer" class="section light">
+    <h2>Fertilizer Calculator</h2>
+
+    <div class="calculator">
+        <p>Calculate fertilizer quantity based on your land area.</p>
+
+        <label>Land Area (in acres)</label>
+        <input type="number" id="area" placeholder="Enter acres" min="0.01" step="any">
+
+        <label>Fertilizer per acre (in kg)</label>
+        <input type="number" id="fertilizerRate" placeholder="Enter kg per acre" min="0" step="any">
+
+        <button onclick="calculateFertilizer()">Calculate</button>
+
+        <h3 id="fertilizerResult"></h3>
+        <small>Use the recommended rate from a soil test or agricultural expert.</small>
+    </div>
+</section>
+
+<!-- SOIL INFORMATION -->
+<section class="section">
+    <h2>Soil Information</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>Black Soil</h3>
+            <p>Suitable for cotton, soybean and certain pulses.</p>
+        </div>
+
+        <div class="card">
+            <h3>Red Soil</h3>
+            <p>Suitable for groundnut, millets and pulses with proper nutrients.</p>
+        </div>
+
+        <div class="card">
+            <h3>Alluvial Soil</h3>
+            <p>Fertile soil suitable for rice, wheat and sugarcane.</p>
+        </div>
+
+        <div class="card">
+            <h3>Laterite Soil</h3>
+            <p>Can support tea, coffee and cashew with proper management.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- WEATHER -->
+<section class="section weather-section">
+    <h2>Sample Weather Information</h2>
+
+    <div class="weather">
+        <h3>🌤 Bengaluru Weather (Sample)</h3>
+        <h1>28°C</h1>
+        <p>Partly Cloudy</p>
+        <p>Humidity: 65%</p>
+        <p>Wind Speed: 12 km/h</p>
+        <small>Illustrative sample data, not live weather.</small>
+    </div>
+</section>
+
+<!-- IMAGE GALLERY -->
+<section class="section light">
+    <h2>Interactive Farming Gallery</h2>
+
+    <div class="gallery">
+        <img onclick="enlargeImage(this)" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600" alt="Green agricultural field">
+        <img onclick="enlargeImage(this)" src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?w=600" alt="Farmland">
+        <img onclick="enlargeImage(this)" src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600" alt="Vegetable farming">
+        <img onclick="enlargeImage(this)" src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=600" alt="Agricultural crops">
+    </div>
+
+    <div id="imageModal" class="modal" onclick="closeImage()">
+        <span>&times;</span>
+        <img id="modalImage" alt="Selected farming image">
+    </div>
+</section>
+
+<!-- FARMER TIPS -->
+<section id="tips" class="section">
+    <h2>Smart Farmer Tips</h2>
+
+    <div class="tip-box">
+        <h3>🌱 Daily Farming Tip</h3>
+        <p id="tipText">Click the button to get a farming tip!</p>
+        <button onclick="generateTip()">Get New Tip</button>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h2>🌱 SmartAgri</h2>
+    <p>Empowering Farmers Through Digital Technology</p>
+    <p>© 2026 Smart Agriculture. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

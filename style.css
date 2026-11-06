@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    color: #263b2c;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #176b38;
+    font-size: 27px;
+}
+
+.logo span {
+    color: #7cb342;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #263b2c;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #55a630;
+}
+
+/* HERO */
+.hero {
+    min-height: 550px;
+    background:
+    linear-gradient(rgba(0,40,10,0.65), rgba(0,40,10,0.55)),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #a8e063;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #70ad35;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #4b8d24;
+}
+
+/* GENERAL SECTIONS */
+.section, .about {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.section h2, .about h2 {
+    font-size: 32px;
+    color: #176b38;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    margin-bottom: 25px;
+    color: #777;
+}
+
+.about {
+    max-width: 1000px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* CARDS */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.13);
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #287a3f;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.card button, button {
+    background: #278344;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #165e2c;
+}
+
+/* LIGHT BACKGROUND */
+.light {
+    background: #f1f8f0;
+}
+
+/* SEARCH */
+#cropSearch {
+    width: 80%;
+    max-width: 500px;
+    padding: 14px;
+    border: 1px solid #b8d3ba;
+    border-radius: 7px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* RESULT */
+.result {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 20px;
+    background: #e8f5e9;
+    border-radius: 10px;
+    line-height: 1.8;
+    display: none;
+}
+
+/* CALCULATOR */
+.calculator {
+    max-width: 450px;
+    background: white;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.calculator p {
+    margin-bottom: 20px;
+}
+
+.calculator label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.calculator input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.calculator button {
+    width: 100%;
+}
+
+#fertilizerResult {
+    margin-top: 20px;
+    color: #176b38;
+}
+
+.calculator small {
+    display: block;
+    margin-top: 12px;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* WEATHER */
+.weather {
+    max-width: 350px;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #55a96c, #176b38);
+    color: white;
+    border-radius: 15px;
+    line-height: 2;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.weather h1 {
+    font-size: 50px;
+    margin: 10px;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+}
+
+/* IMAGE MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    padding: 50px 15px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 10px;
+}
+
+.modal span {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 40px;
+    color: white;
+}
+
+/* FARMER TIPS */
+.tip-box {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #e8f5e9;
+    padding: 30px;
+    border-radius: 12px;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+    background: #143d25;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    line-height: 2;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .section, .about {
+        padding: 45px 5%;
+    }
+
+    .section h2, .about h2 {
+        font-size: 26px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #cropSearch {
+        width: 100%;
+    }
+}
